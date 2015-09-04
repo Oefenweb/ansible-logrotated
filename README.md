@@ -25,9 +25,9 @@ None
 * `logrotated_logrotated_d_files.key.{n}.notifempty` [optional]: Whether or not to not rotate the log if it is empty
 * `logrotated_logrotated_d_files.key.{n}.create` [optional]: Whether or not the log file is created immediately after rotation wit the given mode, owner and group
 * `logrotated_logrotated_d_files.key.{n}.sharedscripts` [optional]: Whether or not the scripts are only run once, no matter how many logs match the wildcarded  pattern
-* `logrotated_logrotated_d_files.key.{n}.scripts` [optional]: A hash of scripts
+* `logrotated_logrotated_d_files.key.{n}.scripts` [optional, default: `{}`]: A hash of scripts
 * `logrotated_logrotated_d_files.key.{n}.scripts.key` [required]: Action to run the script (e.g `postrotate`)
-* `logrotated_logrotated_d_files.key.{n}.scripts.key.{n}` [default: []]: List of lines with directives to execute
+* `logrotated_logrotated_d_files.key.{n}.scripts.key.{n}` [default: `[]`]: List of lines with directives to execute
 
 ## Dependencies
 

@@ -38,13 +38,15 @@
 {% if section.sharedscripts is defined and section.sharedscripts %}
   sharedscripts
 {% endif %}
-{% for key, script in section.scripts.iteritems() | default({}) %}
+{% if section.scripts is defined %}
+{% for key, script in section.scripts.iteritems() %}
   {{ key }}
 {% for line in script | default([]) %}
     {{ line }}
 {% endfor %}
   endscript
 {% endfor %}
+{% endif %}
 }
 
 {% endfor %}

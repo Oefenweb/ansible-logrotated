@@ -22,6 +22,7 @@ None
 * `logrotated_logrotated_d_files.key.{n}.rotate` [optional]: Number of times log files are rotated (before being removed)
 * `logrotated_logrotated_d_files.key.{n}.compress` [optional]: Whether or not old versions of log files are compressed
 * `logrotated_logrotated_d_files.key.{n}.delaycompress` [optional]: Whether or not to postpone compression of the previous log file to the next rotation cycle
+* `logrotated_logrotated_d_files.key.{n}.copytruncate` [optional]: Whether or not to truncate the original log file to zero size in place after creating a copy
 * `logrotated_logrotated_d_files.key.{n}.notifempty` [optional]: Whether or not to not rotate the log if it is empty
 * `logrotated_logrotated_d_files.key.{n}.create` [optional]: Whether or not the log file is created immediately after rotation wit the given mode, owner and group
 * `logrotated_logrotated_d_files.key.{n}.sharedscripts` [optional]: Whether or not the scripts are only run once, no matter how many logs match the wildcarded  pattern

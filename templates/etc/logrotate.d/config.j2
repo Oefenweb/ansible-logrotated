@@ -1,0 +1,38 @@
+# {{ ansible_managed }}
+
+{% for section in item.value | default([]) %}
+{% for log in section.logs | default([]) %}
+{{ log }}
+{% endfor %}
+{
+{% if section.daily is defined and section.daily %}
+  daily
+{% endif %}
+{% if section.missingok is defined and section.missingok %}
+  missingok
+{% endif %}
+{% if section.rotate is defined %}
+  rotate {{ section.rotate }}
+{% endif %}
+{% if section.compress is defined and section.compress %}
+  compress
+{% endif %}
+{% if section.delaycompress is defined and section.delaycompress %}
+  delaycompress
+{% endif %}
+{% if section.create is defined %}
+  create {{ section.create }}
+{% endif %}
+{% if section.sharedscripts is defined and section.sharedscripts %}
+  sharedscripts
+{% endif %}
+{% for key, script in section.scripts.iteritems() | default({}) %}
+  {{ key }}
+{% for line in script | default([]) %}
+    {{ line }}
+{% endfor %}
+  endscript
+{% endfor %}
+}
+
+{% endfor %}

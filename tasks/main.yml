@@ -12,6 +12,7 @@
   template:
     src: etc/logrotate.d/config.j2
     dest: "/etc/logrotate.d/{{ item.key }}"
+    validate: "logrotate -vdf %s"
     owner: root
     group: root
     mode: 0644

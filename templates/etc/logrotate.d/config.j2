@@ -8,6 +8,15 @@
 {% if section.daily is defined and section.daily %}
   daily
 {% endif %}
+{% if section.weekly is defined and section.weekly %}
+  weekly
+{% endif %}
+{% if section.monthly is defined and section.monthly %}
+  monthly
+{% endif %}
+{% if section.yearly is defined and section.yearly %}
+  yearly
+{% endif %}
 {% if section.missingok is defined and section.missingok %}
   missingok
 {% endif %}
@@ -19,6 +28,9 @@
 {% endif %}
 {% if section.delaycompress is defined and section.delaycompress %}
   delaycompress
+{% endif %}
+{% if section.notifempty is defined and section.notifempty %}
+  notifempty
 {% endif %}
 {% if section.create is defined %}
   create {{ section.create }}

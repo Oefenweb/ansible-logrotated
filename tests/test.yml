@@ -9,12 +9,12 @@
       apache2:
         - logs:
             - '/var/log/apache2/*.log'
-            - '/var/www/*/*/log/*.log'
-          daily: true
+          weekly: true
           missingok: true
-          rotate: 7
+          rotate: 52
           compress: true
           delaycompress: true
+          notifempty: true
           create: 640 root adm
           sharedscripts: true
           scripts:

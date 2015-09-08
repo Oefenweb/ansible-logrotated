@@ -10,25 +10,25 @@ None
 
 #### Variables
 
-* `logrotated_logrotated_d_files` [default: `{}`]: `/etc/logrotated.d/*` A list of application-specific file declarations
-* `logrotated_logrotated_d_files.key`: The name of the logrotated configuration file (e.g `apache2`)
-* `logrotated_logrotated_d_files.key.{n}` [optional, default: `[]`]: A section declaration
-* `logrotated_logrotated_d_files.key.{n}.logs` [default: `[]`]: The log files for this section
-* `logrotated_logrotated_d_files.key.{n}.daily` [optional]: Whether or not log files are rotated every day
-* `logrotated_logrotated_d_files.key.{n}.weekly` [optional]: Whether or not log files are rotated weekly
-* `logrotated_logrotated_d_files.key.{n}.monthly` [optional]: Whether or not log files are rotated monthly
-* `logrotated_logrotated_d_files.key.{n}.yearly` [optional]: Whether or not log files are rotated yearly
-* `logrotated_logrotated_d_files.key.{n}.missingok` [optional]: Whether or not to go on to the next log file without issuing an error message when the  log  file is missing
-* `logrotated_logrotated_d_files.key.{n}.rotate` [optional]: Number of times log files are rotated (before being removed)
-* `logrotated_logrotated_d_files.key.{n}.compress` [optional]: Whether or not old versions of log files are compressed
-* `logrotated_logrotated_d_files.key.{n}.delaycompress` [optional]: Whether or not to postpone compression of the previous log file to the next rotation cycle
-* `logrotated_logrotated_d_files.key.{n}.copytruncate` [optional]: Whether or not to truncate the original log file to zero size in place after creating a copy
-* `logrotated_logrotated_d_files.key.{n}.notifempty` [optional]: Whether or not to not rotate the log if it is empty
-* `logrotated_logrotated_d_files.key.{n}.create` [optional]: Whether or not the log file is created immediately after rotation wit the given mode, owner and group
-* `logrotated_logrotated_d_files.key.{n}.sharedscripts` [optional]: Whether or not the scripts are only run once, no matter how many logs match the wildcarded  pattern
-* `logrotated_logrotated_d_files.key.{n}.scripts` [optional, default: `{}`]: A hash of scripts
-* `logrotated_logrotated_d_files.key.{n}.scripts.key` [required]: Action to run the script (e.g `postrotate`)
-* `logrotated_logrotated_d_files.key.{n}.scripts.key.{n}` [default: `[]`]: List of lines with directives to execute
+* `logrotated_logrotate_d_files` [default: `{}`]: `/etc/logrotated.d/*` A list of application-specific file declarations
+* `logrotated_logrotate_d_files.key`: The name of the logrotated configuration file (e.g `apache2`)
+* `logrotated_logrotate_d_files.key.{n}` [optional, default: `[]`]: A section declaration
+* `logrotated_logrotate_d_files.key.{n}.logs` [default: `[]`]: The log files for this section
+* `logrotated_logrotate_d_files.key.{n}.daily` [optional]: Whether or not log files are rotated every day
+* `logrotated_logrotate_d_files.key.{n}.weekly` [optional]: Whether or not log files are rotated weekly
+* `logrotated_logrotate_d_files.key.{n}.monthly` [optional]: Whether or not log files are rotated monthly
+* `logrotated_logrotate_d_files.key.{n}.yearly` [optional]: Whether or not log files are rotated yearly
+* `logrotated_logrotate_d_files.key.{n}.missingok` [optional]: Whether or not to go on to the next log file without issuing an error message when the  log  file is missing
+* `logrotated_logrotate_d_files.key.{n}.rotate` [optional]: Number of times log files are rotated (before being removed)
+* `logrotated_logrotate_d_files.key.{n}.compress` [optional]: Whether or not old versions of log files are compressed
+* `logrotated_logrotate_d_files.key.{n}.delaycompress` [optional]: Whether or not to postpone compression of the previous log file to the next rotation cycle
+* `logrotated_logrotate_d_files.key.{n}.copytruncate` [optional]: Whether or not to truncate the original log file to zero size in place after creating a copy
+* `logrotated_logrotate_d_files.key.{n}.notifempty` [optional]: Whether or not to not rotate the log if it is empty
+* `logrotated_logrotate_d_files.key.{n}.create` [optional]: Whether or not the log file is created immediately after rotation wit the given mode, owner and group
+* `logrotated_logrotate_d_files.key.{n}.sharedscripts` [optional]: Whether or not the scripts are only run once, no matter how many logs match the wildcarded  pattern
+* `logrotated_logrotate_d_files.key.{n}.scripts` [optional, default: `{}`]: A hash of scripts
+* `logrotated_logrotate_d_files.key.{n}.scripts.key` [required]: Action to run the script (e.g `postrotate`)
+* `logrotated_logrotate_d_files.key.{n}.scripts.key.{n}` [default: `[]`]: List of lines with directives to execute
 
 ## Dependencies
 

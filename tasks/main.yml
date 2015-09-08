@@ -16,5 +16,5 @@
     owner: root
     group: root
     mode: 0644
-  with_dict: logrotated_logrotate_d_files    
+  with_dict: logrotated_logrotate_d_files
   tags: [configuration, logrotated, logrotated-configuration, logrotated-configuration-logrotate-d]

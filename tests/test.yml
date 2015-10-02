@@ -15,13 +15,13 @@
           compress: true
           delaycompress: true
           notifempty: true
-          create: 640 root adm
+          create: '640 root adm'
           sharedscripts: true
           scripts:
             postrotate:
               - 'if /etc/init.d/apache2 status > /dev/null ; then \'
               - '  /etc/init.d/apache2 reload > /dev/null; \'
-              - fi;
+              - 'fi;'
             prerotate:
               - 'if [ -d /etc/logrotate.d/httpd-prerotate ]; then \'
               - '  run-parts /etc/logrotate.d/httpd-prerotate; \'

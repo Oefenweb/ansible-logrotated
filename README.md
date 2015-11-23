@@ -14,6 +14,7 @@ None
 * `logrotated_logrotate_d_files.key`: The name of the logrotated configuration file (e.g `apache2`)
 * `logrotated_logrotate_d_files.key.{n}` [optional, default: `[]`]: A section declaration
 * `logrotated_logrotate_d_files.key.{n}.logs` [default: `[]`]: The log files for this section
+* `logrotated_logrotate_d_files.key.{n}.size` [optional]: Rotate logs when they reach this size
 * `logrotated_logrotate_d_files.key.{n}.daily` [optional]: Whether or not log files are rotated every day
 * `logrotated_logrotate_d_files.key.{n}.weekly` [optional]: Whether or not log files are rotated weekly
 * `logrotated_logrotate_d_files.key.{n}.monthly` [optional]: Whether or not log files are rotated monthly

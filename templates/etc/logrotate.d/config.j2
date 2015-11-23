@@ -5,6 +5,9 @@
 {{ log }}
 {% endfor %}
 {
+{% if section.size is defined and section.size %}
+  size {{ section.size }}
+{% endif %}
 {% if section.daily is defined and section.daily %}
   daily
 {% endif %}

@@ -6,7 +6,10 @@
     state: latest
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  tags: [configuration, logrotated, logrotated-install]
+  tags:
+    - configuration
+    - logrotated
+    - logrotated-install
 
 - name: update application-specific configuration files
   template:
@@ -16,4 +19,8 @@
     group: root
     mode: 0644
   with_dict: "{{ logrotated_logrotate_d_files }}"
-  tags: [configuration, logrotated, logrotated-configuration, logrotated-configuration-logrotate-d]
+  tags:
+    - configuration
+    - logrotated
+    - logrotated-configuration
+    - logrotated-configuration-logrotate-d

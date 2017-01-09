@@ -1,4 +1,4 @@
 # vars file for logrotated
 ---
-logrotated_dependencies
+logrotated_dependencies:
   - logrotate

@@ -45,7 +45,7 @@
   sharedscripts
 {% endif %}
 {% if section.scripts is defined %}
-{% for key, script in section.scripts.iteritems() %}
+{% for key, script in section.scripts.items() %}
   {{ key }}
 {% for line in script | default([]) %}
     {{ line }}

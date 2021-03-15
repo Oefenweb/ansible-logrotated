@@ -1,4 +1,4 @@
-# tasks file for logrotated
+# tasks file
 ---
 - name: install
   apt:

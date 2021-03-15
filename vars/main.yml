@@ -1,4 +1,4 @@
-# vars file for logrotated
+# vars file
 ---
 logrotated_dependencies:
   - logrotate

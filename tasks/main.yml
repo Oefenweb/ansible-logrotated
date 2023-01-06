@@ -1,7 +1,7 @@
 # tasks file
 ---
-- name: install
-  apt:
+- name: install  # noqa args[module]
+  ansible.builtin.apt:
     name: "{{ logrotated_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -12,7 +12,7 @@
     - logrotated-install
 
 - name: update application-specific configuration files
-  template:
+  ansible.builtin.template:
     src: etc/logrotate.d/config.j2
     dest: "/etc/logrotate.d/{{ item.key }}"
     owner: root

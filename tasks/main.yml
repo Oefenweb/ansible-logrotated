@@ -1,6 +1,6 @@
 # tasks file
 ---
-- name: install
+- name: install  # noqa args[module]
   apt:
     name: "{{ logrotated_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"

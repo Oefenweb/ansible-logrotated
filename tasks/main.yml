@@ -24,3 +24,14 @@
     - logrotated
     - logrotated-configuration
     - logrotated-configuration-logrotate-d
+
+- name: remove default (redundant) package configuration files
+  ansible.builtin.file:
+    path: "/etc/logrotate.d/{{ item.key }}.dpkg-dist"
+    state: absent
+  with_dict: "{{ logrotated_logrotate_d_files }}"
+  tags:
+    - configuration
+    - logrotated
+    - logrotated-configuration
+    - logrotated-configuration-logrotate-d

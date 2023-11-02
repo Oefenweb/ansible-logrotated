@@ -43,7 +43,7 @@ None
 ---
 - hosts: all
   roles:
-    - logrotated
+    - oefenweb.logrotated
 ```
 
 ##### Complex configuration
@@ -52,7 +52,7 @@ None
 ---
 - hosts: all
   roles:
-    - logrotated
+    - oefenweb.logrotated
   vars:
     logrotated_logrotate_d_files:
       apache2:

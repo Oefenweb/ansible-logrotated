@@ -17,7 +17,7 @@
     dest: "/etc/logrotate.d/{{ item.key }}"
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
   with_dict: "{{ logrotated_logrotate_d_files }}"
   tags:
     - configuration

@@ -1,6 +1,7 @@
 ## logrotated
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-logrotated.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-logrotated) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-logrotated-blue.svg)](https://galaxy.ansible.com/Oefenweb/logrotated)
+[![CI](https://github.com/Oefenweb/ansible-logrotated/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-logrotated/actions?query=workflow%3ACI)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-logrotated-blue.svg)](https://galaxy.ansible.com/Oefenweb/logrotated)
 
 Manage logrotated.d in Debian-like systems.
 
